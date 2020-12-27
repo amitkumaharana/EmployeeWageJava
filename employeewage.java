@@ -1,8 +1,17 @@
-public class employeewage{
-	public static void main(String[] args){
+class WageCalculate
+{
+	int daily_employee_wage = 0;
+	int wage_per_hour = 20;
+	int full_day_hour = 8;
+	int part_time_hour = 8;
+	int monthly_wage = 0;
+	int total_working_hour = 0;
+	int total_working_days = 0;
+	public void wage()
+	{
 		System.out.println("Welcome to Employee Wage Computation Program");
-		int daily_employee_wage = 0, wage_per_hour = 20, full_day_hour = 8, part_time_hour = 8, monthly_wage = 0, total_working_hour = 0, total_working_days = 0;
-		while(total_working_hour<100 && total_working_days<20){
+		while(total_working_hour<100 && total_working_days<20)
+		{
 			double employee_attendance_check=Math.floor(Math.random()*10)%2;
 			switch ((int)employee_attendance_check){
 				case 0:
@@ -36,4 +45,14 @@ public class employeewage{
 		System.out.println("Total working days are "+total_working_days);
 		System.out.println("Total working hours are "+total_working_hour);
 	}
+}
+
+public class employeewage {
+
+	public static void main(String[] args) {
+
+		WageCalculate wc=new WageCalculate();
+		wc.wage();
+	}
+
 }

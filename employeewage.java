@@ -7,10 +7,12 @@ class WageCalculate
 	int monthly_wage = 0;
 	int total_working_hour = 0;
 	int total_working_days = 0;
-	public void wage()
+	int monthly_working_days=0;
+	int monthly_working_hours=0;
+	public void wage(int wage_per_hour,int monthly_working_days,int monthly_working_hours)
 	{
 		System.out.println("Welcome to Employee Wage Computation Program");
-		while(total_working_hour<100 && total_working_days<20)
+		while(total_working_hour<monthly_working_hours && total_working_days<monthly_working_days)
 		{
 			double employee_attendance_check=Math.floor(Math.random()*10)%2;
 			switch ((int)employee_attendance_check){
@@ -50,9 +52,17 @@ class WageCalculate
 public class employeewage {
 
 	public static void main(String[] args) {
-
-		WageCalculate wc=new WageCalculate();
-		wc.wage();
+		// TODO Auto-generated method stub
+		
+		WageCalculate Microsoft=new WageCalculate();
+		System.out.println("Wage Compute for Microsoft");
+		Microsoft.wage(20,20,100);
+		WageCalculate Apple=new WageCalculate();
+		System.out.println("Wage Compute for Apple");
+		Apple.wage(26,18,98);
+		WageCalculate Bridgelabz=new WageCalculate();
+		System.out.println("Wage Compute for Bridgelabz");
+		Bridgelabz.wage(38,22,84);
 	}
 
 }
